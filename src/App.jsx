@@ -1,121 +1,84 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const progress = Math.min(Math.abs(count) % 20, 20)
+
+  const moodLabel =
+    count === 0 ? 'Ready' : count > 0 ? 'Building momentum' : 'Cooling down'
+
+  const handleStep = (step) => {
+    setCount((currentCount) => currentCount + step)
+  }
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
+    <main className="app-shell">
+      <div className="orb orb-one" aria-hidden="true" />
+      <div className="orb orb-two" aria-hidden="true" />
+      <div className="grid-overlay" aria-hidden="true" />
+
+      <section className="counter-panel">
+        <div className="panel-copy">
+          <span className="eyebrow">Glassmorphic counter</span>
+          <h1>Minimal motion. Maximum presence.</h1>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            A bold counter experience with layered depth, soft highlights, and
+            controls that feel premium from the first click.
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
+        <div className="counter-card">
+          <div className="card-topline">
+            <span className="status-pill">{moodLabel}</span>
+            <span className="mono-label">Live value</span>
+          </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+          <div className="count-wrap" aria-live="polite" aria-atomic="true">
+            <span className="count-value">{count}</span>
+            <span className="count-caption">Dynamic counter</span>
+          </div>
+
+          <div className="progress-shell" aria-hidden="true">
+            <div className="progress-track">
+              <div className="progress-fill" style={{ width: `${progress * 5}%` }} />
+            </div>
+            <span>{progress}/20</span>
+          </div>
+
+          <div className="actions">
+            <button type="button" className="ghost-button" onClick={() => handleStep(-1)}>
+              -1
+            </button>
+            <button type="button" className="primary-button" onClick={() => handleStep(1)}>
+              +1
+            </button>
+            <button type="button" className="ghost-button" onClick={() => handleStep(5)}>
+              +5
+            </button>
+          </div>
+
+          <button type="button" className="reset-button" onClick={() => setCount(0)}>
+            Reset counter
+          </button>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+
+        <div className="feature-row">
+          <article>
+            <span>Layered glass</span>
+            <p>Blurred panels, translucent borders, and a reflective glow.</p>
+          </article>
+          <article>
+            <span>Responsive flow</span>
+            <p>Scales cleanly from desktop hero layout to compact mobile stacking.</p>
+          </article>
+          <article>
+            <span>Instant feedback</span>
+            <p>Every action updates the value, mood, and progress indicator live.</p>
+          </article>
         </div>
       </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    </main>
   )
 }
 
