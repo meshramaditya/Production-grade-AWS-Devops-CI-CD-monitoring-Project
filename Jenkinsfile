@@ -27,17 +27,12 @@ pipeline {
             }
         }
 
-        stage('Check Workspace') {
+         stage('Docker Info') {
             steps {
                 bat '''
-                echo Current Directory:
-                cd
-
-                echo =====================
-                dir
-
-                echo =====================
-                type package.json
+                docker version
+                docker info
+                docker buildx version
                 '''
             }
         }
