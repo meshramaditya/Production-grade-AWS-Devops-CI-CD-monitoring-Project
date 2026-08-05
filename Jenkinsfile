@@ -27,6 +27,21 @@ pipeline {
             }
         }
 
+        stage('Check Workspace') {
+            steps {
+                bat '''
+                echo Current Directory:
+                cd
+
+                echo =====================
+                dir
+
+                echo =====================
+                type package.json
+                '''
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 bat '''
