@@ -8,6 +8,12 @@ This project demonstrates a production-style CI/CD pipeline for deploying a Reac
 
 The pipeline automatically builds the application, creates a Docker image, pushes it to Amazon ECR, and deploys the application to Amazon EKS.
 
+
+---
+#Architecture
+
+<img width="1536" height="1024" alt="ChatGPT Image Aug 6, 2026, 11_53_56 AM" src="https://github.com/user-attachments/assets/b2c1c08f-fafb-4b39-b061-c6a617fd5ab6" />
+
 ---
 
 # Technologies Used
