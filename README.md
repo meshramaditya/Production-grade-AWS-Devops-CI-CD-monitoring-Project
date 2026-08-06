@@ -79,6 +79,45 @@ LoadBalancer Service
 
 Users Access Application
 
+
+---
+
+# screenshots
+
+1. github-repo
+   <img width="1919" height="1005" alt="Screenshot 2026-08-06 110704" src="https://github.com/user-attachments/assets/0fe622b6-1366-4542-b64a-564c18d905e9" />
+
+2. jenkins-success
+   <img width="1919" height="1008" alt="Screenshot 2026-08-06 104851" src="https://github.com/user-attachments/assets/d211d561-1d4e-4be3-b676-d0f64e53a308" />
+
+3. ecr-image
+   <img width="1917" height="1011" alt="Screenshot 2026-08-06 104917" src="https://github.com/user-attachments/assets/0caadedd-e6cb-4bfb-99a1-1edb30634166" />
+
+4. eks-cluster
+   <img width="1913" height="1002" alt="Screenshot 2026-08-06 104952" src="https://github.com/user-attachments/assets/e007d737-61ae-40c0-bc4d-fd1a747df469" />
+
+5. worker-nodes
+   <img width="1917" height="1010" alt="Screenshot 2026-08-06 105016" src="https://github.com/user-attachments/assets/3bc453f8-7db7-45e1-948a-d087778932e8" />
+
+   <img width="1919" height="1012" alt="Screenshot 2026-08-06 105204" src="https://github.com/user-attachments/assets/5051922b-8d11-459d-aaac-b9bacd18a43e" />
+
+6. pods-running
+   <img width="1918" height="1010" alt="Screenshot 2026-08-06 105105" src="https://github.com/user-attachments/assets/dbc1c7f5-0bde-4f59-a5ed-37f6992307d0" />
+
+7. pv-pvc
+   <img width="1919" height="1008" alt="Screenshot 2026-08-06 105317" src="https://github.com/user-attachments/assets/f0336dc5-8c66-4a82-b342-510556c7434a" />
+
+8. loadbalancer
+  <img width="1919" height="1009" alt="Screenshot 2026-08-06 105404" src="https://github.com/user-attachments/assets/0d584341-eb52-4d74-bf2c-0881f3bdaeea" />
+ 
+9. react-app
+  <img width="1919" height="1009" alt="Screenshot 2026-08-06 105335" src="https://github.com/user-attachments/assets/a41f8a2f-7953-45fb-9b00-3e014a93b4e5" />
+  
+10. jenkins-console
+    <img width="1919" height="1000" alt="Screenshot 2026-08-06 110233" src="https://github.com/user-attachments/assets/d6bfb5f5-f4d9-49c9-9346-511ff58c4833" />
+    <img width="1919" height="1001" alt="Screenshot 2026-08-06 110253" src="https://github.com/user-attachments/assets/c8cd3217-3135-4663-b23b-94369e96d62c" />
+
+
 ---
 
 # Features
