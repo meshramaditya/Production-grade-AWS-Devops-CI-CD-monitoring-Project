@@ -1,3 +1,5 @@
+
+
 # 🚀 Production Grade AWS DevOps CI/CD Pipeline using Jenkins, Docker, Amazon ECR & Amazon EKS
 
 ## 📌 Project Overview
@@ -5,14 +7,6 @@
 This project demonstrates a production-style CI/CD pipeline for deploying a React application on Amazon EKS using Jenkins, Docker, Amazon ECR, and Kubernetes.
 
 The pipeline automatically builds the application, creates a Docker image, pushes it to Amazon ECR, and deploys the application to Amazon EKS.
-
----
-
-# Architecture
-
-<p align="center">
-<img src="architecture.png" width="900">
-</p>
 
 ---
 
