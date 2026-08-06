@@ -62,8 +62,7 @@ pipeline {
             steps {
 
                 withCredentials([
-                    string(credentialsId: 'adi-aws-acces-key', variable: 'AWS_ACCESS_KEY_ID'),
-                    string(credentialsId: 'adi-aws-secret-key', variable: 'AWS_SECRET_ACCESS_KEY')
+                    usernamePassword(credentialsId: 'adi-aws-acces-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')
                 ]) {
 
                     bat '''
@@ -81,8 +80,7 @@ pipeline {
             steps {
 
                 withCredentials([
-                    string(credentialsId: 'adi-aws-acces-key', variable: 'AWS_ACCESS_KEY_ID'),
-                    string(credentialsId: 'adi-aws-secret-key', variable: 'AWS_SECRET_ACCESS_KEY')
+                    usernamePassword(credentialsId: 'adi-aws-acces-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')
                 ]) {
 
                     bat '''
