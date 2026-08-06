@@ -65,7 +65,7 @@ function App() {
 
         <div className="feature-row">
           <article>
-            <span>Layered glass</span>
+            <span>Layered glass </span>
             <p>Blurred panels, translucent borders, and a reflective glow.</p>
           </article>
           <article>
@@ -74,7 +74,7 @@ function App() {
           </article>
           <article>
             <span>Instant feedback</span>
-            <p>Every action updates the value, mood, and progress indicator live.</p>
+            <p>Every action updates the value, mood, and progress indicators live.</p>
           </article>
         </div>
       </section>
