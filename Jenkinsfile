@@ -27,6 +27,18 @@ pipeline {
             }
         }
 
+        stage('Install Dependencies') {
+            steps {
+                bat 'npm install'
+            }
+        }
+
+        stage('Build Frontend') {
+            steps {
+                bat 'npm run build'
+            }
+        }
+
          stage('Docker Info') {
             steps {
                 bat '''
